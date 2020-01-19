@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <script type="text/javascript" src="{% static "js/main.js" %}"></script>
+    </head>
+    <body>
+      <p>Add core objects:</p>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+      </form>
+      <div>
+        <p>Core objects list:</p>
+        <ol>
+          {% for a in all_core_objects %}
+            <li style="line-height: 25px;">{{ a.name }} &nbsp;&nbsp; <button id="{{ a.id }}" onclick="editObject(this.id)">edit</button></li> 
+          {% endfor %}
+          </ol>
+      </div>
+    </body>
+</html>

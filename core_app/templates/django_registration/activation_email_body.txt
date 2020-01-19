@@ -1,0 +1,8 @@
+Hi,
+
+Click the link below to activate your account:
+
+{{scheme}}://{{site}}/core_app/accounts/activate/{{ activation_key }}/
+
+Best regards,
+Core_app
