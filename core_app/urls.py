@@ -4,7 +4,7 @@ from django.conf.urls import include, url
 from . import views
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    url(r'^$', views.index, name='index'),
     url(r'^accounts/', include('django_registration.backends.activation.urls')),
     url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^logged_out/', views.logged_out, name='logged_out'),
