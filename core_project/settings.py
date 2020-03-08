@@ -138,3 +138,7 @@ EMAIL_HOST_PASSWORD = 'your gmail password'
 LOGIN_REDIRECT_URL = '/core_app/'
 LOGOUT_REDIRECT_URL = '/core_app/logged_out/'
 CREATE_OBJECT_URL = '/core_app/add_core_object/'
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
